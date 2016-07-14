@@ -2,7 +2,7 @@ library(tidyr)
 library(dplyr)
 
 #Reading file from CSV
-rawcsv <- read.csv("refine.csv")
+rawcsv <- read.csv("refine_original.csv")
 
 #Changing CSV to df then to tbl
 csvtbl <- tbl_df(rawcsv)
@@ -87,4 +87,4 @@ csvtbl <- cbind(csvtbl, product_smartphone, product_tv, product_laptop, product_
 csvtbl <- cbind(csvtbl, company_philips, company_akzo, company_van_houten, company_unilever)
 glimpse(csvtbl)
 
-write.csv(csvtbl, file = "refined.csv", row.names=FALSE)
+write.csv(csvtbl, file = "refine_completed.csv", row.names=FALSE)
